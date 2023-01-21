@@ -10,7 +10,6 @@ ENV WP_URL="localhost:1234" \
     WP_THEME=twentynineteen \
     WP_PLUGINS="leaflet-map quote-tweet"
 
-# copy install script with permissions
 COPY docker-install.sh /usr/local/bin/
 USER root
 RUN chmod 755 /usr/local/bin/docker-install.sh
