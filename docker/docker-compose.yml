@@ -38,7 +38,19 @@ services:
       WORDPRESS_DB_USER: ${WORDPRESS_DB_USER:-wordpress}
       WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD:-wordpress}
       WORDPRESS_DATABASE: ${MYSQL_DATABASE:-wordpress}
+    hostname: www.numeration.com
 
 volumes:
   db_volume:
   wp_volume:
+
+
+  # nginx:
+  #   image: nginx:latest
+  #   ports:
+  #     - "80:80"
+  #   volumes:
+  #     - ./nginx/conf.d:/etc/nginx/conf.d
+  #     - wp_volume:/var/www/html
+  #   depends_on:
+  #     - wordpress
